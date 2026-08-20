@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pronostics Ligue 1</title>
+<style>
+  :root { --bg:#0f1420; --card:#1b2233; --line:#2a3347; --tx:#e8ecf4; --mut:#93a0b8;
+          --hi:#22c55e; --mid:#eab308; --lo:#ef4444; --accent:#3b82f6; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--tx);
+         font:15px/1.4 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+  header { padding:24px 16px 8px; max-width:1000px; margin:0 auto; }
+  h1 { margin:0 0 4px; font-size:22px; }
+  .sub { color:var(--mut); font-size:13px; }
+  main { max-width:1000px; margin:0 auto; padding:16px;
+         display:grid; gap:12px; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); }
+  .card { background:var(--card); border:1px solid var(--line); border-left:4px solid var(--mut);
+          border-radius:12px; padding:14px 16px; }
+  .card.hi { border-left-color:var(--hi); }
+  .card.mid { border-left-color:var(--mid); }
+  .card.lo { border-left-color:var(--lo); }
+  .when { color:var(--mut); font-size:12px; text-transform:uppercase; letter-spacing:.04em; }
+  .teams { font-size:17px; margin:4px 0; }
+  .teams span { color:var(--mut); font-size:13px; margin:0 4px; }
+  .score { font-size:34px; font-weight:800; letter-spacing:2px; margin:6px 0 2px; color:var(--accent); }
+  .winner { font-size:13px; margin-bottom:10px; }
+  .probs > div { display:flex; align-items:center; gap:8px; font-size:12px;
+                 color:var(--mut); margin:2px 0; }
+  .bar { display:inline-block; height:6px; background:var(--accent); border-radius:3px; }
+  .probs > div:nth-child(2) .bar { background:var(--mut); }
+  .alt { margin-top:10px; font-size:12px; color:var(--mut);
+         border-top:1px solid var(--line); padding-top:8px; }
+  footer { max-width:1000px; margin:0 auto; padding:8px 16px 40px; color:var(--mut); font-size:12px; }
+</style></head><body>
+<header>
+  <h1>⚽ Pronostics Ligue 1</h1>
+  <div class="sub">3 match(s) · mis à jour le jeu 20/08 05h51 (Paris) ·
+    scores optimisés pour le barème Mon Petit Prono (3 pts score exact, 1 pt bon résultat) ·
+    bonus +10% domicile</div>
+</header>
+<main>
+    <article class="card hi">
+      <div class="when">ven 21/08 05h51</div>
+      <div class="teams"><b>PSG</b> <span>vs</span> <b>Nantes</b></div>
+      <div class="score">2-0</div>
+      <div class="winner">Pronostic : <b>PSG</b> · confiance 81%</div>
+      <div class="probs">
+        <div>1 81% <span class="bar" style="width:81%"></span></div>
+        <div>N 12% <span class="bar" style="width:12%"></span></div>
+        <div>2 6% <span class="bar" style="width:6%"></span></div>
+      </div>
+      <div class="alt">Autres scores probables : 2-0, 3-0, 1-0, 4-0</div>
+    </article>
+    <article class="card mid">
+      <div class="when">ven 21/08 05h51</div>
+      <div class="teams"><b>Marseille</b> <span>vs</span> <b>Lyon</b></div>
+      <div class="score">2-1</div>
+      <div class="winner">Pronostic : <b>Marseille</b> · confiance 48%</div>
+      <div class="probs">
+        <div>1 48% <span class="bar" style="width:48%"></span></div>
+        <div>N 26% <span class="bar" style="width:26%"></span></div>
+        <div>2 26% <span class="bar" style="width:26%"></span></div>
+      </div>
+      <div class="alt">Autres scores probables : 1-1, 2-1, 1-0, 2-0</div>
+    </article>
+    <article class="card mid">
+      <div class="when">ven 21/08 05h51</div>
+      <div class="teams"><b>Brest</b> <span>vs</span> <b>Monaco</b></div>
+      <div class="score">1-2</div>
+      <div class="winner">Pronostic : <b>Monaco</b> · confiance 41%</div>
+      <div class="probs">
+        <div>1 32% <span class="bar" style="width:32%"></span></div>
+        <div>N 27% <span class="bar" style="width:27%"></span></div>
+        <div>2 41% <span class="bar" style="width:41%"></span></div>
+      </div>
+      <div class="alt">Autres scores probables : 1-1, 1-2, 2-2, 2-1</div>
+    </article></main>
+<footer>
+  Modèle hybride : cotes bookmakers (issue 1/N/2) + Poisson attaque/défense (score exact).
+  Prédictions probabilistes fournies à titre indicatif — aucun résultat garanti.
+  Sources : The Odds API, football-data.co.uk.
+</footer>
+</body></html>

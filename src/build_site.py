@@ -75,7 +75,7 @@ def build():
   <h1>⚽ Pronostics Ligue 1</h1>
   <div class="sub">{data['count']} match(s) · mis à jour le {escape(gen)} (Paris) ·
     scores optimisés pour le barème Mon Petit Prono (3 pts score exact, 1 pt bon résultat) ·
-    bonus +10% domicile</div>
+    bonus +5% domicile</div>
 </header>
 <main>{''.join(cards) if cards else '<p>Aucun match à venir dans la fenêtre.</p>'}</main>
 <footer>

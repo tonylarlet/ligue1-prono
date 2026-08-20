@@ -25,7 +25,7 @@ HISTORY_URLS = [
 UPCOMING_DAYS = 9
 MAX_GOALS = 8          # troncature de la matrice de scores
 DIXON_COLES_RHO = -0.05  # correction basse-fréquence (0-0,1-0,0-1,1-1)
-HOME_WIN_BOOST = 1.10    # +10% sur la proba de victoire à domicile (préférence utilisateur)
+HOME_WIN_BOOST = 1.05    # +5% sur la proba de victoire à domicile (l'avantage est déjà en partie dans les cotes)
 
 # Les 18 clubs de Ligue 1 2026-2027. Nom canonique -> fragments reconnus dans
 # les deux sources (Odds API, football-data.co.uk). Fragments assez spécifiques

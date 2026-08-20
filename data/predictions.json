@@ -1,40 +1,80 @@
 {
-  "generated": "2026-08-20T03:51:36.577916+00:00",
-  "count": 3,
+  "generated": "2026-08-20T03:58:25.692772+00:00",
+  "count": 9,
   "predictions": [
     {
-      "home": "PSG",
-      "away": "Nantes",
-      "commence": "2026-08-21T03:51:36.577109+00:00",
+      "home": "Marseille",
+      "away": "Strasbourg",
+      "commence": "2026-08-21T18:45:00+00:00",
       "proba": {
-        "home": 0.8148148148148147,
-        "draw": 0.12037037037037034,
-        "away": 0.0648148148148148
+        "home": 0.578,
+        "draw": 0.219,
+        "away": 0.203
       },
-      "winner": "PSG",
-      "winner_conf": 0.8148148148148147,
-      "score": "2-0",
-      "exp_points": 1.12,
+      "winner": "Marseille",
+      "winner_conf": 0.578,
+      "score": "2-1",
+      "exp_points": 0.785,
       "alt_scores": [
+        "2-1",
+        "1-1",
         "2-0",
-        "3-0",
-        "1-0",
-        "4-0"
+        "3-1"
       ]
     },
     {
-      "home": "Marseille",
-      "away": "Lyon",
-      "commence": "2026-08-21T03:51:36.577788+00:00",
+      "home": "Lens",
+      "away": "Auxerre",
+      "commence": "2026-08-22T15:15:00+00:00",
       "proba": {
-        "home": 0.4837476099426386,
-        "draw": 0.2581261950286806,
-        "away": 0.2581261950286806
+        "home": 0.626,
+        "draw": 0.207,
+        "away": 0.167
       },
-      "winner": "Marseille",
-      "winner_conf": 0.4837476099426386,
+      "winner": "Lens",
+      "winner_conf": 0.626,
+      "score": "2-0",
+      "exp_points": 0.882,
+      "alt_scores": [
+        "2-0",
+        "1-0",
+        "1-1",
+        "3-0"
+      ]
+    },
+    {
+      "home": "Le Mans",
+      "away": "Brest",
+      "commence": "2026-08-22T18:45:00+00:00",
+      "proba": {
+        "home": 0.406,
+        "draw": 0.262,
+        "away": 0.332
+      },
+      "winner": "Le Mans",
+      "winner_conf": 0.406,
       "score": "2-1",
-      "exp_points": 0.676,
+      "exp_points": 0.556,
+      "alt_scores": [
+        "1-1",
+        "1-2",
+        "0-1",
+        "2-1"
+      ]
+    },
+    {
+      "home": "Nice",
+      "away": "Lorient",
+      "commence": "2026-08-22T18:45:00+00:00",
+      "proba": {
+        "home": 0.476,
+        "draw": 0.255,
+        "away": 0.269
+      },
+      "winner": "Nice",
+      "winner_conf": 0.476,
+      "score": "2-1",
+      "exp_points": 0.706,
       "alt_scores": [
         "1-1",
         "2-1",
@@ -43,23 +83,103 @@
       ]
     },
     {
-      "home": "Brest",
-      "away": "Monaco",
-      "commence": "2026-08-21T03:51:36.577909+00:00",
+      "home": "Toulouse",
+      "away": "Lyon",
+      "commence": "2026-08-22T18:45:00+00:00",
       "proba": {
-        "home": 0.32038834951456313,
-        "draw": 0.2718446601941748,
-        "away": 0.4077669902912621
+        "home": 0.351,
+        "draw": 0.26,
+        "away": 0.388
       },
-      "winner": "Monaco",
-      "winner_conf": 0.4077669902912621,
+      "winner": "Lyon",
+      "winner_conf": 0.388,
+      "score": "0-1",
+      "exp_points": 0.577,
+      "alt_scores": [
+        "1-1",
+        "0-1",
+        "1-2",
+        "1-0"
+      ]
+    },
+    {
+      "home": "Troyes",
+      "away": "Paris FC",
+      "commence": "2026-08-22T18:45:00+00:00",
+      "proba": {
+        "home": 0.336,
+        "draw": 0.265,
+        "away": 0.399
+      },
+      "winner": "Paris FC",
+      "winner_conf": 0.399,
       "score": "1-2",
-      "exp_points": 0.575,
+      "exp_points": 0.599,
       "alt_scores": [
         "1-1",
         "1-2",
-        "2-2",
+        "0-1",
         "2-1"
+      ]
+    },
+    {
+      "home": "Angers",
+      "away": "Lille",
+      "commence": "2026-08-23T13:00:00+00:00",
+      "proba": {
+        "home": 0.205,
+        "draw": 0.247,
+        "away": 0.548
+      },
+      "winner": "Lille",
+      "winner_conf": 0.548,
+      "score": "0-1",
+      "exp_points": 0.893,
+      "alt_scores": [
+        "0-1",
+        "0-2",
+        "1-1",
+        "0-0"
+      ]
+    },
+    {
+      "home": "Le Havre",
+      "away": "Monaco",
+      "commence": "2026-08-23T15:15:00+00:00",
+      "proba": {
+        "home": 0.277,
+        "draw": 0.237,
+        "away": 0.486
+      },
+      "winner": "Monaco",
+      "winner_conf": 0.486,
+      "score": "0-1",
+      "exp_points": 0.712,
+      "alt_scores": [
+        "1-1",
+        "0-1",
+        "1-2",
+        "0-2"
+      ]
+    },
+    {
+      "home": "PSG",
+      "away": "Rennes",
+      "commence": "2026-08-23T18:45:00+00:00",
+      "proba": {
+        "home": 0.667,
+        "draw": 0.184,
+        "away": 0.15
+      },
+      "winner": "PSG",
+      "winner_conf": 0.667,
+      "score": "2-0",
+      "exp_points": 0.851,
+      "alt_scores": [
+        "2-0",
+        "2-1",
+        "1-1",
+        "3-0"
       ]
     }
   ]

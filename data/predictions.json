@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-20T03:58:25.692772+00:00",
+  "generated": "2026-08-20T04:02:54.454161+00:00",
   "count": 9,
   "predictions": [
     {
@@ -108,11 +108,11 @@
       "commence": "2026-08-22T18:45:00+00:00",
       "proba": {
         "home": 0.336,
-        "draw": 0.265,
-        "away": 0.399
+        "draw": 0.266,
+        "away": 0.398
       },
       "winner": "Paris FC",
-      "winner_conf": 0.399,
+      "winner_conf": 0.398,
       "score": "1-2",
       "exp_points": 0.599,
       "alt_scores": [
@@ -167,14 +167,14 @@
       "away": "Rennes",
       "commence": "2026-08-23T18:45:00+00:00",
       "proba": {
-        "home": 0.667,
+        "home": 0.668,
         "draw": 0.184,
-        "away": 0.15
+        "away": 0.149
       },
       "winner": "PSG",
-      "winner_conf": 0.667,
+      "winner_conf": 0.668,
       "score": "2-0",
-      "exp_points": 0.851,
+      "exp_points": 0.852,
       "alt_scores": [
         "2-0",
         "2-1",

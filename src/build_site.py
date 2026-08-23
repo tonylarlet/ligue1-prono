@@ -5,6 +5,38 @@ from html import escape
 
 from .config import DATA, DOCS
 
+ACTIONS_URL = "https://github.com/tonylarlet/ligue1-prono/actions/workflows/update.yml"
+
+
+def _bilan_html():
+    """Bloc récap du dernier bilan (data/bilan.json), s'il existe."""
+    f = DATA / "bilan.json"
+    if not f.exists():
+        return ""
+    b = json.loads(f.read_text(encoding="utf-8"))
+    if not b.get("rows"):
+        return ""
+    lines = []
+    for r in b["rows"]:
+        c = "hi" if r["pts"] == 3 else ("mid" if r["pts"] == 1 else "lo")
+        rev = ' <span class="rev">↔ sens inversé</span>' if r.get("reversed") else ""
+        lines.append(
+            f'<tr class="{c}"><td>{escape(r["home"])} – {escape(r["away"])}{rev}</td>'
+            f'<td>{escape(r["pred"])}</td><td>{escape(r["real"])}</td>'
+            f'<td class="pts">{r["pts"]}</td></tr>')
+    warn = (f' · ⚠️ {b["warn"]} match(s) au sens inversé à vérifier'
+            if b.get("warn") else "")
+    return f"""
+  <details class="bilan">
+    <summary><b>Bilan {escape(b['label'])}</b> : {b['points']} pts ·
+      {b['right']}/{b['n']} bons résultats · {b['exact']}/{b['n']} scores exacts ·
+      moy {b['avg']}/match{warn}</summary>
+    <table>
+      <thead><tr><th>Match</th><th>Prono</th><th>Réel</th><th>Pts</th></tr></thead>
+      <tbody>{''.join(lines)}</tbody>
+    </table>
+  </details>"""
+
 
 def _fr_datetime(iso):
     dt = datetime.fromisoformat(iso).astimezone(timezone(timedelta(hours=2)))
@@ -19,6 +51,7 @@ def _bar(p):
 def build():
     data = json.loads((DATA / "predictions.json").read_text(encoding="utf-8"))
     gen = _fr_datetime(data["generated"])
+    bilan = _bilan_html()
     cards = []
     for p in data["predictions"]:
         conf = p["winner_conf"]
@@ -70,13 +103,29 @@ def build():
   .alt {{ margin-top:10px; font-size:12px; color:var(--mut);
          border-top:1px solid var(--line); padding-top:8px; }}
   footer {{ max-width:1000px; margin:0 auto; padding:8px 16px 40px; color:var(--mut); font-size:12px; }}
+  .btn {{ display:inline-block; margin:12px 0 4px; padding:11px 20px; background:var(--accent);
+         color:#fff; font-weight:700; font-size:15px; text-decoration:none; border-radius:10px; }}
+  .btn:hover {{ filter:brightness(1.12); }}
+  .btn-hint {{ color:var(--mut); font-size:12px; margin-left:10px; }}
+  .bilan {{ max-width:1000px; margin:4px auto 0; padding:0 16px; }}
+  .bilan summary {{ cursor:pointer; font-size:13px; color:var(--tx); padding:8px 0; }}
+  .bilan table {{ width:100%; border-collapse:collapse; font-size:13px; margin:6px 0 10px; }}
+  .bilan th, .bilan td {{ text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); }}
+  .bilan td.pts {{ text-align:center; font-weight:700; }}
+  .bilan tr.hi td.pts {{ color:var(--hi); }}
+  .bilan tr.mid td.pts {{ color:var(--mid); }}
+  .bilan tr.lo td.pts {{ color:var(--lo); }}
+  .rev {{ color:var(--mid); font-size:11px; }}
 </style></head><body>
 <header>
   <h1>⚽ Pronostics Ligue 1</h1>
   <div class="sub">{data['count']} match(s) · mis à jour le {escape(gen)} (Paris) ·
     scores optimisés pour le barème Mon Petit Prono (3 pts score exact, 1 pt bon résultat) ·
     bonus +5% domicile</div>
+  <a class="btn" href="{ACTIONS_URL}" target="_blank" rel="noopener">🔄 MAJ DES PRONOS</a>
+  <span class="btn-hint">→ ouvre GitHub, clique « Run workflow » (≈2 min)</span>
 </header>
+{bilan}
 <main>{''.join(cards) if cards else '<p>Aucun match à venir dans la fenêtre.</p>'}</main>
 <footer>
   Modèle hybride : cotes bookmakers (issue 1/N/2) + Poisson attaque/défense (score exact).

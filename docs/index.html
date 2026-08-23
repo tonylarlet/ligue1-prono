@@ -31,121 +31,146 @@
   .alt { margin-top:10px; font-size:12px; color:var(--mut);
          border-top:1px solid var(--line); padding-top:8px; }
   footer { max-width:1000px; margin:0 auto; padding:8px 16px 40px; color:var(--mut); font-size:12px; }
+  .btn { display:inline-block; margin:12px 0 4px; padding:11px 20px; background:var(--accent);
+         color:#fff; font-weight:700; font-size:15px; text-decoration:none; border-radius:10px; }
+  .btn:hover { filter:brightness(1.12); }
+  .btn-hint { color:var(--mut); font-size:12px; margin-left:10px; }
+  .bilan { max-width:1000px; margin:4px auto 0; padding:0 16px; }
+  .bilan summary { cursor:pointer; font-size:13px; color:var(--tx); padding:8px 0; }
+  .bilan table { width:100%; border-collapse:collapse; font-size:13px; margin:6px 0 10px; }
+  .bilan th, .bilan td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); }
+  .bilan td.pts { text-align:center; font-weight:700; }
+  .bilan tr.hi td.pts { color:var(--hi); }
+  .bilan tr.mid td.pts { color:var(--mid); }
+  .bilan tr.lo td.pts { color:var(--lo); }
+  .rev { color:var(--mid); font-size:11px; }
 </style></head><body>
 <header>
   <h1>⚽ Pronostics Ligue 1</h1>
-  <div class="sub">9 match(s) · mis à jour le jeu 20/08 06h09 (Paris) ·
+  <div class="sub">9 match(s) · mis à jour le dim 23/08 23h19 (Paris) ·
     scores optimisés pour le barème Mon Petit Prono (3 pts score exact, 1 pt bon résultat) ·
     bonus +5% domicile</div>
+  <a class="btn" href="https://github.com/tonylarlet/ligue1-prono/actions/workflows/update.yml" target="_blank" rel="noopener">🔄 MAJ DES PRONOS</a>
+  <span class="btn-hint">→ ouvre GitHub, clique « Run workflow » (≈2 min)</span>
 </header>
+
+  <details class="bilan">
+    <summary><b>Bilan Journée 1</b> : 7 pts ·
+      5/9 bons résultats · 1/9 scores exacts ·
+      moy 0.78/match · ⚠️ 1 match(s) au sens inversé à vérifier</summary>
+    <table>
+      <thead><tr><th>Match</th><th>Prono</th><th>Réel</th><th>Pts</th></tr></thead>
+      <tbody><tr class="mid"><td>Marseille – Strasbourg</td><td>2-1</td><td>4-0</td><td class="pts">1</td></tr><tr class="mid"><td>Lens – Auxerre</td><td>2-0</td><td>5-2</td><td class="pts">1</td></tr><tr class="lo"><td>Le Mans – Brest</td><td>2-1</td><td>2-2</td><td class="pts">0</td></tr><tr class="lo"><td>Nice – Lorient</td><td>2-1</td><td>0-0</td><td class="pts">0</td></tr><tr class="mid"><td>Toulouse – Lyon</td><td>0-1</td><td>0-2</td><td class="pts">1</td></tr><tr class="lo"><td>Troyes – Paris FC</td><td>1-2</td><td>0-0</td><td class="pts">0</td></tr><tr class="mid"><td>Angers – Lille</td><td>0-1</td><td>0-2</td><td class="pts">1</td></tr><tr class="hi"><td>Le Havre – Monaco</td><td>0-1</td><td>0-1</td><td class="pts">3</td></tr><tr class="lo"><td>PSG – Rennes <span class="rev">↔ sens inversé</span></td><td>2-0</td><td>2-2</td><td class="pts">0</td></tr></tbody>
+    </table>
+  </details>
 <main>
-    <article class="card hi">
-      <div class="when">ven 21/08 20h45</div>
-      <div class="teams"><b>Marseille</b> <span>vs</span> <b>Strasbourg</b></div>
-      <div class="score">2-1</div>
-      <div class="winner">Pronostic : <b>Marseille</b> · confiance 57%</div>
+    <article class="card mid">
+      <div class="when">ven 28/08 20h45</div>
+      <div class="teams"><b>Lille</b> <span>vs</span> <b>PSG</b></div>
+      <div class="score">0-1</div>
+      <div class="winner">Pronostic : <b>PSG</b> · confiance 53%</div>
       <div class="probs">
-        <div>1 57% <span class="bar" style="width:57%"></span></div>
-        <div>N 22% <span class="bar" style="width:22%"></span></div>
-        <div>2 21% <span class="bar" style="width:21%"></span></div>
+        <div>1 23% <span class="bar" style="width:23%"></span></div>
+        <div>N 24% <span class="bar" style="width:24%"></span></div>
+        <div>2 53% <span class="bar" style="width:53%"></span></div>
       </div>
-      <div class="alt">Autres scores probables : 2-1, 1-1, 2-0, 3-1</div>
-    </article>
-    <article class="card hi">
-      <div class="when">sam 22/08 17h15</div>
-      <div class="teams"><b>Lens</b> <span>vs</span> <b>Auxerre</b></div>
-      <div class="score">2-0</div>
-      <div class="winner">Pronostic : <b>Lens</b> · confiance 62%</div>
-      <div class="probs">
-        <div>1 62% <span class="bar" style="width:62%"></span></div>
-        <div>N 21% <span class="bar" style="width:21%"></span></div>
-        <div>2 17% <span class="bar" style="width:17%"></span></div>
-      </div>
-      <div class="alt">Autres scores probables : 2-0, 1-0, 1-1, 3-0</div>
-    </article>
-    <article class="card lo">
-      <div class="when">sam 22/08 20h45</div>
-      <div class="teams"><b>Le Mans</b> <span>vs</span> <b>Brest</b></div>
-      <div class="score">2-1</div>
-      <div class="winner">Pronostic : <b>Le Mans</b> · confiance 40%</div>
-      <div class="probs">
-        <div>1 40% <span class="bar" style="width:40%"></span></div>
-        <div>N 27% <span class="bar" style="width:27%"></span></div>
-        <div>2 34% <span class="bar" style="width:34%"></span></div>
-      </div>
-      <div class="alt">Autres scores probables : 1-1, 1-2, 0-1, 2-1</div>
+      <div class="alt">Autres scores probables : 0-1, 1-1, 1-2, 0-2</div>
     </article>
     <article class="card mid">
-      <div class="when">sam 22/08 20h45</div>
-      <div class="teams"><b>Nice</b> <span>vs</span> <b>Lorient</b></div>
-      <div class="score">2-1</div>
-      <div class="winner">Pronostic : <b>Nice</b> · confiance 46%</div>
+      <div class="when">sam 29/08 17h15</div>
+      <div class="teams"><b>Strasbourg</b> <span>vs</span> <b>Lens</b></div>
+      <div class="score">1-2</div>
+      <div class="winner">Pronostic : <b>Lens</b> · confiance 43%</div>
       <div class="probs">
-        <div>1 46% <span class="bar" style="width:46%"></span></div>
+        <div>1 30% <span class="bar" style="width:30%"></span></div>
+        <div>N 27% <span class="bar" style="width:27%"></span></div>
+        <div>2 43% <span class="bar" style="width:43%"></span></div>
+      </div>
+      <div class="alt">Autres scores probables : 1-1, 1-2, 2-1, 0-1</div>
+    </article>
+    <article class="card mid">
+      <div class="when">sam 29/08 20h45</div>
+      <div class="teams"><b>Auxerre</b> <span>vs</span> <b>Angers</b></div>
+      <div class="score">1-0</div>
+      <div class="winner">Pronostic : <b>Auxerre</b> · confiance 53%</div>
+      <div class="probs">
+        <div>1 53% <span class="bar" style="width:53%"></span></div>
         <div>N 26% <span class="bar" style="width:26%"></span></div>
-        <div>2 28% <span class="bar" style="width:28%"></span></div>
+        <div>2 21% <span class="bar" style="width:21%"></span></div>
+      </div>
+      <div class="alt">Autres scores probables : 1-0, 0-0, 2-0, 1-1</div>
+    </article>
+    <article class="card lo">
+      <div class="when">sam 29/08 20h45</div>
+      <div class="teams"><b>Brest</b> <span>vs</span> <b>Toulouse</b></div>
+      <div class="score">2-1</div>
+      <div class="winner">Pronostic : <b>Brest</b> · confiance 38%</div>
+      <div class="probs">
+        <div>1 38% <span class="bar" style="width:38%"></span></div>
+        <div>N 28% <span class="bar" style="width:28%"></span></div>
+        <div>2 35% <span class="bar" style="width:35%"></span></div>
+      </div>
+      <div class="alt">Autres scores probables : 1-1, 2-1, 1-0, 1-2</div>
+    </article>
+    <article class="card hi">
+      <div class="when">sam 29/08 20h45</div>
+      <div class="teams"><b>Lyon</b> <span>vs</span> <b>Le Havre</b></div>
+      <div class="score">1-0</div>
+      <div class="winner">Pronostic : <b>Lyon</b> · confiance 65%</div>
+      <div class="probs">
+        <div>1 65% <span class="bar" style="width:65%"></span></div>
+        <div>N 21% <span class="bar" style="width:21%"></span></div>
+        <div>2 14% <span class="bar" style="width:14%"></span></div>
+      </div>
+      <div class="alt">Autres scores probables : 1-0, 2-0, 2-1, 1-1</div>
+    </article>
+    <article class="card mid">
+      <div class="when">sam 29/08 20h45</div>
+      <div class="teams"><b>Lorient</b> <span>vs</span> <b>Troyes</b></div>
+      <div class="score">2-1</div>
+      <div class="winner">Pronostic : <b>Lorient</b> · confiance 52%</div>
+      <div class="probs">
+        <div>1 52% <span class="bar" style="width:52%"></span></div>
+        <div>N 26% <span class="bar" style="width:26%"></span></div>
+        <div>2 22% <span class="bar" style="width:22%"></span></div>
       </div>
       <div class="alt">Autres scores probables : 1-1, 2-1, 1-0, 2-0</div>
     </article>
-    <article class="card lo">
-      <div class="when">sam 22/08 20h45</div>
-      <div class="teams"><b>Toulouse</b> <span>vs</span> <b>Lyon</b></div>
-      <div class="score">0-1</div>
-      <div class="winner">Pronostic : <b>Lyon</b> · confiance 39%</div>
-      <div class="probs">
-        <div>1 34% <span class="bar" style="width:34%"></span></div>
-        <div>N 26% <span class="bar" style="width:26%"></span></div>
-        <div>2 39% <span class="bar" style="width:39%"></span></div>
-      </div>
-      <div class="alt">Autres scores probables : 1-1, 0-1, 1-2, 1-0</div>
-    </article>
     <article class="card mid">
-      <div class="when">sam 22/08 20h45</div>
-      <div class="teams"><b>Troyes</b> <span>vs</span> <b>Paris FC</b></div>
-      <div class="score">1-2</div>
-      <div class="winner">Pronostic : <b>Paris FC</b> · confiance 40%</div>
+      <div class="when">dim 30/08 15h00</div>
+      <div class="teams"><b>Paris FC</b> <span>vs</span> <b>Nice</b></div>
+      <div class="score">2-1</div>
+      <div class="winner">Pronostic : <b>Paris FC</b> · confiance 46%</div>
       <div class="probs">
-        <div>1 33% <span class="bar" style="width:33%"></span></div>
+        <div>1 46% <span class="bar" style="width:46%"></span></div>
         <div>N 27% <span class="bar" style="width:27%"></span></div>
-        <div>2 40% <span class="bar" style="width:40%"></span></div>
+        <div>2 27% <span class="bar" style="width:27%"></span></div>
       </div>
-      <div class="alt">Autres scores probables : 1-1, 1-2, 0-1, 0-0</div>
+      <div class="alt">Autres scores probables : 1-1, 2-1, 2-0, 1-2</div>
     </article>
     <article class="card hi">
-      <div class="when">dim 23/08 15h00</div>
-      <div class="teams"><b>Angers</b> <span>vs</span> <b>Lille</b></div>
-      <div class="score">0-1</div>
-      <div class="winner">Pronostic : <b>Lille</b> · confiance 55%</div>
-      <div class="probs">
-        <div>1 20% <span class="bar" style="width:20%"></span></div>
-        <div>N 25% <span class="bar" style="width:25%"></span></div>
-        <div>2 55% <span class="bar" style="width:55%"></span></div>
-      </div>
-      <div class="alt">Autres scores probables : 0-1, 0-2, 1-1, 0-0</div>
-    </article>
-    <article class="card mid">
-      <div class="when">dim 23/08 17h15</div>
-      <div class="teams"><b>Le Havre</b> <span>vs</span> <b>Monaco</b></div>
-      <div class="score">0-1</div>
-      <div class="winner">Pronostic : <b>Monaco</b> · confiance 49%</div>
-      <div class="probs">
-        <div>1 27% <span class="bar" style="width:27%"></span></div>
-        <div>N 24% <span class="bar" style="width:24%"></span></div>
-        <div>2 49% <span class="bar" style="width:49%"></span></div>
-      </div>
-      <div class="alt">Autres scores probables : 1-1, 0-1, 1-2, 0-2</div>
-    </article>
-    <article class="card hi">
-      <div class="when">dim 23/08 20h45</div>
-      <div class="teams"><b>PSG</b> <span>vs</span> <b>Rennes</b></div>
-      <div class="score">2-0</div>
-      <div class="winner">Pronostic : <b>PSG</b> · confiance 66%</div>
+      <div class="when">dim 30/08 17h15</div>
+      <div class="teams"><b>Rennes</b> <span>vs</span> <b>Le Mans</b></div>
+      <div class="score">2-1</div>
+      <div class="winner">Pronostic : <b>Rennes</b> · confiance 66%</div>
       <div class="probs">
         <div>1 66% <span class="bar" style="width:66%"></span></div>
-        <div>N 19% <span class="bar" style="width:19%"></span></div>
+        <div>N 20% <span class="bar" style="width:20%"></span></div>
         <div>2 15% <span class="bar" style="width:15%"></span></div>
       </div>
-      <div class="alt">Autres scores probables : 2-0, 1-1, 2-1, 3-0</div>
+      <div class="alt">Autres scores probables : 2-1, 2-0, 1-0, 1-1</div>
+    </article>
+    <article class="card lo">
+      <div class="when">dim 30/08 20h45</div>
+      <div class="teams"><b>Monaco</b> <span>vs</span> <b>Marseille</b></div>
+      <div class="score">2-1</div>
+      <div class="winner">Pronostic : <b>Monaco</b> · confiance 39%</div>
+      <div class="probs">
+        <div>1 39% <span class="bar" style="width:39%"></span></div>
+        <div>N 25% <span class="bar" style="width:25%"></span></div>
+        <div>2 36% <span class="bar" style="width:36%"></span></div>
+      </div>
+      <div class="alt">Autres scores probables : 1-1, 2-2, 2-1, 1-2</div>
     </article></main>
 <footer>
   Modèle hybride : cotes bookmakers (issue 1/N/2) + Poisson attaque/défense (score exact).

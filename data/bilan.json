@@ -1,0 +1,83 @@
+{
+  "label": "Journée 1",
+  "n": 9,
+  "right": 5,
+  "exact": 1,
+  "points": 7,
+  "avg": 0.78,
+  "warn": 1,
+  "rows": [
+    {
+      "home": "Marseille",
+      "away": "Strasbourg",
+      "pred": "2-1",
+      "real": "4-0",
+      "pts": 1,
+      "reversed": false
+    },
+    {
+      "home": "Lens",
+      "away": "Auxerre",
+      "pred": "2-0",
+      "real": "5-2",
+      "pts": 1,
+      "reversed": false
+    },
+    {
+      "home": "Le Mans",
+      "away": "Brest",
+      "pred": "2-1",
+      "real": "2-2",
+      "pts": 0,
+      "reversed": false
+    },
+    {
+      "home": "Nice",
+      "away": "Lorient",
+      "pred": "2-1",
+      "real": "0-0",
+      "pts": 0,
+      "reversed": false
+    },
+    {
+      "home": "Toulouse",
+      "away": "Lyon",
+      "pred": "0-1",
+      "real": "0-2",
+      "pts": 1,
+      "reversed": false
+    },
+    {
+      "home": "Troyes",
+      "away": "Paris FC",
+      "pred": "1-2",
+      "real": "0-0",
+      "pts": 0,
+      "reversed": false
+    },
+    {
+      "home": "Angers",
+      "away": "Lille",
+      "pred": "0-1",
+      "real": "0-2",
+      "pts": 1,
+      "reversed": false
+    },
+    {
+      "home": "Le Havre",
+      "away": "Monaco",
+      "pred": "0-1",
+      "real": "0-1",
+      "pts": 3,
+      "reversed": false
+    },
+    {
+      "home": "PSG",
+      "away": "Rennes",
+      "pred": "2-0",
+      "real": "2-2",
+      "pts": 0,
+      "reversed": true
+    }
+  ]
+}
